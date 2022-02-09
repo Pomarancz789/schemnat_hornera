@@ -1,14 +1,20 @@
-//
-//  main.cpp
-//  schemnat_hornera
-//
-//  Created by Kuba Wtorkiewicz on 09/02/2022.
-//
-
 #include <iostream>
+using namespace std;
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+int main() {
+    //2x^3-3x^2+6x-1
+    //x*(x*(2x-3)+6)-1
+    float x=7;
+    int tab[]={2,-3,6,-1};
+    int stopien=3;
+    
+    int temp=tab[0];
+    for(int i=0; i<stopien; i++)
+    {
+        temp*=x;
+        temp+=tab[i+1];
+    }
+    cout << temp << endl;
+    
     return 0;
 }
